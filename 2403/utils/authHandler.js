@@ -33,7 +33,7 @@ module.exports = {
     },
     checkRole: function (...requiredRoles) {
         return function (req, res, next) {
-            let roleOfUser = req.user.role?.name;
+            let roleOfUser = req.user.role.name;
             if (requiredRoles.includes(roleOfUser)) {
                 next();
             } else {
